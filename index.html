@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d12">
+  <meta name="description" content="Mroczny, gotycki profil gracza.">
+  <title>Wigur!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <a class="sigil" href="#top" aria-label="Wróć na górę">✦</a>
+    <span class="topbar-label">ABOUT ME SITE <i></i> VER 1.0</span>
+    <a class="topbar-link" href="#links">LINKS <span>↘</span></a>
+  </header>
+
+  <main id="top" class="page-shell">
+    <section class="hero panel">
+      <div class="hero-ornament ornament-left">✧</div>
+      <div class="hero-ornament ornament-right">✧</div>
+      <p class="eyebrow"><span class="eyebrow-line"></span> GIGA CHAD <span class="eyebrow-line"></span></p>
+      <h1 class="nickname" spellcheck="false" aria-label="Edytuj nickname">Wigur!</h1>
+      <p class="subtitle" spellcheck="false" aria-label="Edytuj tytuł">Gamer & Artist </p>
+      <div class="avatar-frame">
+        <div class="avatar-corner corner-tl"></div><div class="avatar-corner corner-tr"></div>
+        <img class="avatar" src="avatar.jpg" alt="avatar">
+        <div class="avatar-corner corner-bl"></div><div class="avatar-corner corner-br"></div>
+        <span class="avatar-rune">W</span>
+      </div>
+      <p class="hero-note">“Ruin has come to our family”</p>
+      <div class="hero-divider"><span>✦</span></div>
+    </section>
+
+    <section id="links" class="section-block">
+      <div class="section-heading">
+        <span class="section-index">◈</span><h2>Links to other worlds</h2><span class="heading-rule"></span>
+      </div>
+      <div class="social-grid">
+        <a class="social-card" href="https://steamcommunity.com/profiles/76561198182389379/" target="_blank" rel="noreferrer"><span class="social-icon">♨</span><span><b>Steam</b><small>Game Center</small></span><span class="external">↗</span></a>
+        <a class="social-card" href="https://www.instagram.com/fajnywigur123/" target="_blank" rel="noreferrer"><span class="social-icon">◎</span><span><b>Instagram</b><small>Private photos</small></span><span class="external">↗</span></a>
+        <a class="social-card" href="https://www.youtube.com/@wigur2137" target="_blank" rel="noreferrer"><span class="social-icon">▶</span><span><b>YouTube</b><small>Private videos</small></span><span class="external">↗</span></a>
+        <a class="social-card" href="https://github.com/Wigurr" target="_blank" rel="noreferrer"><span class="social-icon">◈</span><span><b>Github</b><small>Programs</small></span><span class="external">↗</span></a>
+        <a class="social-card" href="https://myanimelist.net/profile/Wigur" target="_blank" rel="noreferrer"><span class="social-icon">▣</span><span><b>MyAnimeList</b><small>Anime & manga</small></span><span class="external">↗</span></a>
+        <a class="social-card" href="https://www.chess.com/member/w1gur4k" target="_blank" rel="noreferrer"><span class="social-icon">♞</span><span><b>Chess.com</b><small>Chess</small></span><span class="external">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <span class="section-index">◈</span><h2>Character statistics</h2><span class="heading-rule"></span>
+      </div>
+      <div class="panel traits-panel">
+        <p class="section-intro"></p>
+        <div class="character-layout">
+          <div class="character-stats" aria-label="Statystyki postaci">
+            <label class="stat-field"><span>LEVEL</span><input type="number" min="1" max="999" value="22" data-stat="level" aria-label="Poziom postaci" disabled></label>
+            <label class="stat-field"><span>CLASS</span><input type="text" value="Student Informatyki" data-stat="class" aria-label="Klasa postaci" maxlength="24" disabled></label>
+            <label class="stat-field"><span>ALIGNMENT</span><input type="text" value="Lawfull Neutral" data-stat="subclass" aria-label="Subklasa postaci" maxlength="24" disabled></label>
+          </div>
+          <div class="traits-grid">
+            <div class="trait" data-trait>
+              <div class="trait-labels"><span>Introvert</span><span>Extrovert</span></div>
+              <input aria-label="Introvert do Extrovert" type="range" min="0" max="100" value="35" disabled>
+              <div class="trait-meta"><span>Social energy</span><output>32%</output></div>
+            </div>
+            <div class="trait" data-trait>
+              <div class="trait-labels"><span>Casual</span><span>Competitive</span></div>
+              <input aria-label="Casual do Competitive" type="range" min="0" max="100" value="65" disabled>
+              <div class="trait-meta"><span>Playstyle</span><output>78%</output></div>
+            </div>
+            <div class="trait" data-trait>
+              <div class="trait-labels"><span>Pessimism</span><span>Optimism</span></div>
+              <input aria-label="Logic do Creativity" type="range" min="0" max="100" value="50" disabled>
+              <div class="trait-meta"><span>Mindset</span><output>61%</output></div>
+    </section>
+    <p class="edit-hint">Have someone the reset potion?</p>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <span class="section-index">◈</span><h2>Hall of Ranks</h2><span class="heading-rule"></span>
+      </div>
+      <div class="rank-grid">
+        <a href="https://rocketleague.tracker.network/rocket-league/profile/steam/76561198182389379/overview" target="_blank"><article class="rank-card"><div class="rank-symbol"><img class="rank-image" src="rlchamp.webp" alt="symbol"><span class="rank-fallback"></span></div><div><small>ROCKET LEAGUE</small><h3>Champion I DIV 4</h3><p>Peak: 2022</p></div><span class="rank-star">✦</span></article></a>
+        <a href="https://mmradar.gg/summoner/Wigur-6666" target="_blank"><article class="rank-card"><div class="rank-symbol"><img class="rank-image" src="gold.png" alt="symbol"><span class="rank-fallback"></span></div><div><small>LEAGUE OF LEGENDS</small><h3>Gold I 64LP</h3><p>Peak: 2026</p></div><span class="rank-star">✦</span></article></a>
+        <a href="https://www.chess.com/member/W1GUR4K/stats/rapid?time=0" target="_blank"><article class="rank-card"><div class="rank-symbol"><img class="rank-image" src="chess.webp" alt="symbol"><span class="rank-fallback"></span></div><div><small>CHESS.COM</small><h3>RAPID 951 ELO</h3><p>Peak: 2025</p></div><span class="rank-star">✦</span></article></a>
+      </div>
+      <p class="edit-hint">I'm not playing rankeds much :x</p>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <span class="section-index">◈</span><h2>Favourite Games</h2><span class="heading-rule"></span><span class="section-aside">FAVOURITES / 08</span>
+      </div>
+      <div class="games-grid">
+        <article class="game-card"><div class="game-art art-one"><img class="game-art-image" src="gtav.jpg" alt="Grafika gry 1"><span>01</span><b>Grand Theft Auto V</b></div><div class="game-info"><h3>Begin: 2016</h3><p><span>PLAYTIME</span><strong>1300 h</strong></p></div></article>
+        <article class="game-card"><div class="game-art art-two"><img class="game-art-image" src="rocketl.jpg" alt="Grafika gry 2"><span>02</span><b>Rocket League</b></div><div class="game-info"><h3 >Begin: 2017</h3><p><span>PLAYTIME</span><strong>1100 h</strong></p></div></article>
+        <article class="game-card"><div class="game-art art-three"><img class="game-art-image" src="minecraft.jpg" alt="Grafika gry 3"><span>03</span><b>Minecraft</b></div><div class="game-info"><h3 >Begin: 2014</h3><p><span>PLAYTIME</span><strong>+1000 h</strong></p></div></article>
+        <article class="game-card"><div class="game-art art-four"><img class="game-art-image" src="payday2.jpg" alt="Grafika gry 4"><span>04</span><b>PAYDAY 2</b></div><div class="game-info"><h3 >Begin: 2016</h3><p><span>PLAYTIME</span><strong>1000 h</strong></p></div></article>
+        <article class="game-card"><div class="game-art art-five"><img class="game-art-image" src="albion.jpg" alt="Grafika gry 5"><span>05</span><b>Albion Online</b></div><div class="game-info"><h3 >Begin: 2025</h3><p><span>PLAYTIME</span><strong>950 h</strong></p></div></article>
+        <article class="game-card"><div class="game-art art-six"><img class="game-art-image" src="satisfactory.jpg" alt="Grafika gry 6"><span>06</span><b>Satisfactory</b></div><div class="game-info"><h3 >Begin: 2019</h3><p><span>PLAYTIME</span><strong >600 h</strong></p></div></article>
+        <article class="game-card"><div class="game-art art-seven"><img class="game-art-image" src="valheim.jpg" alt="Grafika gry 7"><span>07</span><b>Valheim</b></div><div class="game-info"><h3 >Begin: 2021</h3><p><span>PLAYTIME</span><strong >750 h</strong></p></div></article>
+        <article class="game-card"><div class="game-art art-eight"><img class="game-art-image" src="ds.jpg" alt="Grafika gry 8"><span>08</span><b>Dark Souls</b></div><div class="game-info"><h3 >Begin: 2024</h3><p><span>PLAYTIME</span><strong >80 h</strong></p></div></article>
+      </div>
+      <p class="edit-hint">Random order, I love them all 🖤</p>
+    </section>
+
+    <section class="section-block gallery-section">
+      <div class="section-heading">
+        <span class="section-index">◈</span><h2>Gallery of adventures</h2><span class="heading-rule"></span>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-large"><img src="g1.jpg" alt="" loading="lazy"><figcaption><span>01 / Valheim</span><b>Brave Chad Vikings</b></figcaption></figure>
+        <figure class="gallery-item"><img src="g2.jpg" alt="" loading="lazy"><figcaption><span>02 / Sea of Thieves</span><b>Team of sailors</b></figcaption></figure>
+        <figure class="gallery-item"><img src="g3.jpg" alt="" loading="lazy"><figcaption><span>03 / Throne and Liberty</span><b>Traveler's rest</b></figcaption></figure>
+        <figure class="gallery-item"><img src="g4.jpg" alt="" loading="lazy"><figcaption><span>04 / Euro Truck Simulator 2</span><b>Volvo</b></figcaption></figure>
+        <figure class="gallery-item"><img src="g5.jpg" alt="" loading="lazy"><figcaption><span>05 / For Honor</span><b>Kensei</b></figcaption></figure>
+      </div>
+      <p class="edit-hint">Me and the bois</p>
+    </section>
+
+    <section class="section-block gallery-section">
+      <div class="section-heading">
+        <span class="section-index">◈</span><h2>Gallery of Arts</h2><span class="heading-rule"></span>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-large"><img src="a1.jpg" alt="" loading="lazy"><figcaption><span>01</span><b>26.09.2026</b></figcaption></figure>
+        <figure class="gallery-item gallery-large"><img src="a2.jpg" alt="" loading="lazy"><figcaption><span>02</span><b>29.08.2026</b></figcaption></figure>
+        <figure class="gallery-item gallery-large"><img src="a3.png" alt="" loading="lazy"><figcaption><span>03</span><b>10.08.2023</b></figcaption></figure>
+      </div>
+      <p class="edit-hint">I'm just beginner and drawing when I want to. More on <a href="https://www.instagram.com/fajnywigur123/" target="_blank">Instagram</a></p>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-sigil">✦</span>
+      <p>LAST UPDATE: 15.10.2026 <span>·</span> THANK YOU FOR WANDERING</p>
+      <a href="#top">BACK TO TOP ↑</a>
+    </footer>
+  </main>
+</body>
+</html>
