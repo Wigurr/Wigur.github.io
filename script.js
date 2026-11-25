@@ -59,3 +59,53 @@ document.querySelectorAll('[data-stat]').forEach((field) => {
   if (saved !== null) field.value = saved;
   field.addEventListener('input', () => localStorage.setItem(key, field.value));
 });
+
+
+// Powiększanie zdjęć w galeriach oraz grafik gier.
+const lightbox = document.querySelector('#imageLightbox');
+
+if (lightbox) {
+  const lightboxImage = lightbox.querySelector('.lightbox-image');
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  const closeButton = lightbox.querySelector('.lightbox-close');
+  let previouslyFocused = null;
+
+  const openLightbox = (image) => {
+    if (!image || !image.src) return;
+    previouslyFocused = document.activeElement;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || 'Powiększona grafika';
+    const galleryCaption = image.closest('.gallery-item')?.querySelector('figcaption');
+    const gameTitle = image.closest('.game-card')?.querySelector('.game-art b, .game-info h3');
+    lightboxCaption.textContent = galleryCaption
+      ? galleryCaption.innerText.replace(/\s+/g, ' ').trim()
+      : (gameTitle?.innerText.trim() || image.alt || '');
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    closeButton.focus();
+  };
+
+  const closeLightbox = () => {
+    if (!lightbox.classList.contains('is-open')) return;
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.src = '';
+    if (previouslyFocused && typeof previouslyFocused.focus === 'function') previouslyFocused.focus();
+  };
+
+  document.querySelectorAll('.gallery-item img, .game-art-image').forEach((image) => {
+    image.addEventListener('click', () => openLightbox(image));
+    image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', `${image.alt || 'Grafika'} - kliknij, aby powiększyć`);
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openLightbox(image); }
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (event) => { if (event.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeLightbox(); });
+}
